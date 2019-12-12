@@ -1,7 +1,7 @@
 PImage bg;
 PImage kelp;
-PImage fishLeft;
-PImage fishRight;
+//PImage fishLeft;
+//PImage fishRight;
 color bodyColor = color(255,255,255);
 color finsColor = color(255,255,255);
 float fishX;
@@ -29,13 +29,12 @@ void setup() {
   colorMode(HSB);
   bg = loadImage("fishBG.jpg");
   kelp = loadImage("kelp.png");
-  fishLeft = loadImage("left.png");
-  fishRight = loadImage("right.png");
+  
   
   foodPieces = new Food[1000];
   foodtimer = new FoodTimer(300);
   foodtimer.start();
-  
+
   fishfoodX = 50; 
   fishfoodY = 50;
   
@@ -52,37 +51,37 @@ finsColor = color(mouseX/3, 140, 240);
 
 timer();
 
-int posX, posY; 
+//int posX, posY; 
 
-for(int i=0; i<20; i=i+1){
-  posX = int(random(width-100));
-  posY = int(random(width-100)); 
-  fishfoodX(posX, posY);
-  fishfoodY(posX, posY); 
+//for(int i=0; i<20; i=i+1){
+//  posX = int(random(width-100));
+//  posY = int(random(width-100)); 
+//  fishfoodX(posX, posY);
+//  fishfoodY(posX, posY); 
  
-}
+//}
 
-fishfoodX = fishfoodX + fishfoodSpeedX; 
-fishfoodY = fishfoodY + fishfoodSpeedY; 
+//fishfoodX = fishfoodX + fishfoodSpeedX; 
+//fishfoodY = fishfoodY + fishfoodSpeedY; 
 
 //fill(50); 
 //ellipse(fishfoodX, fishfoodY, 20, 20); 
 
 ///WRAP SCREEN/////////////////////////////////////////////////////////////////
 
-if (fishfoodX > width){
-  fishfoodX = 0; 
-}
-if (fishfoodX < 0){
-  fishfoodX = width; 
-}
+//if (fishfoodX > width){
+//  fishfoodX = 0; 
+//}
+//if (fishfoodX < 0){
+//  fishfoodX = width; 
+//}
 
-if (fishfoodY > height) {
-  fishfoodY = 0; 
-}
-if (fishfoodY < 0){
-  fishfoodY = height; 
-}
+//if (fishfoodY > height) {
+//  fishfoodY = 0; 
+//}
+//if (fishfoodY < 0){
+//  fishfoodY = height; 
+//}
 
 //////////////////////////////EASING///////////////////////////////////
 float cursorX = mouseX;
